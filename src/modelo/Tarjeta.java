@@ -7,7 +7,7 @@ package modelo;
 
 /**
  *
- * @author Andrea
+ * @author Joss
  */
 public class Tarjeta {
     private long codigo;

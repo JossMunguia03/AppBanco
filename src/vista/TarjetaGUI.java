@@ -10,7 +10,7 @@ import modelo.Tarjeta;
 
 /**
  *
- * @author Andrea
+ * @author Fer Quijano
  */
 public class TarjetaGUI extends javax.swing.JPanel {
 

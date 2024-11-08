@@ -12,7 +12,7 @@ import modelo.Tarjeta;
 
 /**
  *
- * @author Andrea
+ * @author Alan Espericueta
  */
 public class ClienteGUI extends javax.swing.JPanel {
 

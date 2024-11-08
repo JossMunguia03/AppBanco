@@ -10,7 +10,7 @@ import javax.swing.DefaultListModel;
 
 /**
  *
- * @author Andrea
+ * @author Joss
  */
 public class Menu extends javax.swing.JPanel {
 

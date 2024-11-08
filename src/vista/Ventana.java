@@ -9,7 +9,7 @@ import java.awt.event.WindowAdapter;
 import javax.swing.JPanel;
 /**
  *
- * @author Andrea
+ * @author Joss
  */
 
 public class Ventana extends javax.swing.JFrame {
