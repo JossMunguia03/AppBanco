@@ -16,8 +16,8 @@ public class Login extends javax.swing.JPanel {
     /**
      * Variables con información para ingreso al programa
      */
-    private final String usuario = "prueba";
-    private final String contrasena = "pass";
+    private final String usuario = "admin";
+    private final String contrasena = "rootpassword";
 
     /**
      * Constructor
@@ -35,84 +35,101 @@ public class Login extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         usuarioTextField = new javax.swing.JTextField();
         passwordField = new javax.swing.JPasswordField();
         loginBtn = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Usuario:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Contraseña:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
 
-        usuarioTextField.setText("prueba");
+        usuarioTextField.setText("admin");
+        jPanel1.add(usuarioTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 150, 25));
 
-        passwordField.setText("pass");
+        passwordField.setText("rootpassword");
+        jPanel1.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 150, 25));
 
-        loginBtn.setText("Iniciar");
+        loginBtn.setBackground(new java.awt.Color(255, 102, 102));
+        loginBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        loginBtn.setText("Iniciar Sesión");
         loginBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(loginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 150, 30));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/GENERIC BANK LOGO (1).png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, -1, -1));
+
+        jLabel5.setText("¡Bienvenido!");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Bungee Inline", 1, 18)); // NOI18N
+        jLabel6.setText("PotroBanco");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/67033 (1).jpg"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 330));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(loginBtn)
-                    .addComponent(passwordField)
-                    .addComponent(usuarioTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(95, 95, 95)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(usuarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(loginBtn)
-                .addGap(106, 106, 106))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
-        
-        // obtiene el valor del campo password 
+
+        // obtiene el valor del campo password
         String password = String.valueOf(passwordField.getPassword());
-        
+
         // hace las validaciones de usuario y contraseña
-        
+
         if(usuarioTextField.getText().equals(usuario))
-            if(password.equals(contrasena)){               
-        // Si la validación es correcta, crea nueva ventana con el panel de menu
-                System.out.println("inicio");
-                Menu menu = new Menu();
-                new Ventana(menu);
-                this.setVisible(false);
-               }
-            else JOptionPane.showMessageDialog(this, "Contraseña incorreta");
+        if(password.equals(contrasena)){
+            // Si la validación es correcta, crea nueva ventana con el panel de menu
+            System.out.println("inicio");
+            Menu menu = new Menu();
+            new Ventana(menu);
+            this.setVisible(false);
+        }
+        else JOptionPane.showMessageDialog(this, "Contraseña incorreta");
         else JOptionPane.showMessageDialog(this, "Usuario incorreto");
-                
+
     }//GEN-LAST:event_loginBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginBtn;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JTextField usuarioTextField;
